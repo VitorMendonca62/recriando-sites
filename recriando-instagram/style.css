@@ -1,103 +1,147 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
 }
 body {
-    background-color: #FAFAFA;
+  background-color: rgb(250, 250, 250);
 }
-#foto-celular {
-    margin-left: 310px;
-    margin-top: 35px;
-    height: 630px;
+section {
+  height: 100vh;
 }
-#login {
-    background-color: #FFFFFF ;
-    border: 1px solid rgba(128, 128, 128, 0.418);
-    width: 350px;
-    height: 355px;
-    display: grid;
-    place-items: center;
-    margin-left: 750px;
-    margin-top: -620px;
+body,
+section,
+.login,
+.div-ou,
+.login,
+.nao-tem-conta,
+.aplicativos,
+.imagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
-#logo-instagram {
-    width: 180px;
-    height: 90px;
+.lado-esquerdo {
+  margin-right: 3rem;
 }
-input {
-    background-color: #FAFAFA;
-    border: 1px solid rgba(128, 128, 128, 0.418);   
-    padding: 10px;
-    margin-bottom: 5px;
-    width: 200px ;
+.logo-instagram {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 12rem;
+  height: 5.5rem;
 }
-::placeholder {
-    font-size: 12px;
+.login,
+.nao-tem-conta {
+  background-color: #ffffff;
+  border: 1px solid rgba(128, 128, 128, 0.418);
+  width: 22rem;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-#botão-entrar {
-    margin-top: -10px;
-    width: 222px;
-    padding: 5px;
-    border-radius: 4px;
+.input {
+  padding: 9px 0 7px 8px;
+  width: 16.25rem;
+  height: 2.5rem;
+  margin-top: 0.4rem;
+  background-color: rgb(248, 248, 248);
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 3px;
+  font-size: 0.7rem;
+  outline: none;
+}
+.input::placeholder {
+  font-size: 0.78rem;
+  color: rgb(153, 153, 153);
+}
+.input:focus {
+  border: 1px solid rgb(139, 139, 139);
+}
+.botão-entrar {
+  width: 16.25rem;
+  padding: 8px 9px;
+  background-color: #0094f680;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+.botão-entrar:hover {
+  background-color: #0094f6;
+}
+.div-ou {
+  width: 18rem;
+  margin-top: 1rem;
+  font-size: 12px;
+  color: rgb(139, 139, 139);
+}
+.div-ou hr {
+  width: 100%;
+}
+.div-ou hr {
+  margin: 0 16px;
+}
+.entrar-facebook {
+  margin-top: 1rem;
+}
+.entrar-facebook a {
+  color: #385185;
+  display: flex;
+  font-size: 14px;
+}
+.entrar-facebook a p {
+  margin-left: 0.5rem;
+}
+.esqueceu-senha {
+  font-size: 0.75rem;
+  color: rgb(0, 55, 127);
+  margin-top: 1rem;
+  padding-bottom: 0.8rem;
+}
+.nao-tem-conta {
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  padding: 1.25rem;
+}
+.nao-tem-conta a {
+  color: #0482d6;
+}
+.aplicativos {
+  margin-top: 1.5rem;
+  font-size: 15px;
+  width: 22rem;
+  flex-direction: column;
+}
+.aplicativos .imagens {
+  flex-direction: row;
+}
+.aplicativos img {
+  width: 8.5rem;
+  height: 2.8rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-height: 500px) {
+  section {
+    height: 100%;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .lado-esquerdo {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .login,
+  .nao-tem-conta {
+    background-color: rgb(250, 250, 250);
     border: none;
-    background-color: #0095F6;
-    color: white;
-}
-#ou {
-    font-size: 12px;
-    color: rgb(167, 167, 167);
-} 
-hr {
-    width: 90px;
-    box-shadow: none;
-    color: rgb(167, 167, 167);
-    position: absolute;
-    margin-top: 5px;
-}
-#hr-01 {
-    margin-left: -100px;
-}
-#hr-02 {
-    margin-left: 25px;
-}
-#entrar-facebook a i,p{
-    display: inline-block;
-    color: #385185;
-    margin-right: 5px;
-    text-decoration: none;
-}
-#esqueceu-senha {
-    font-size: 11px;
-    margin-bottom: 10px;
-}
-#não-tem-conta {
-    background-color: #FFFFFF ;
-    border: 1px solid rgba(128, 128, 128, 0.418);
-    width: 330px;
-    display: grid;
-    place-items: center;
-    margin-left: 750px;
-    padding: 10px;
-    margin-top: 10px;
-}
-#não-tem-conta p,a, #obter-apps {
-    font-size: 14px;
-}
-#não-tem-conta a {
-    color: #0095f6;
-    text-decoration: none;
-}
-#aplicativos  {
-    margin-top: 20px;
-    margin-left: 780px;
-}
-#obter-apps {
-    color: black;
-    margin-left: 65px;
-    margin-bottom: 15px;
-}
-#aplicativos img {
-    width: 135px;
-    height: 40;
+  }
 }
