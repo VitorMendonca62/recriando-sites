@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsivo.css" />
+    <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png">
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Document</title>
+    <title>Instagram</title>
   </head>
 
   <body>
     <section>
       <div class="lado-esquerdo">
-        <img
-          clas="foto-celular"
-          src="foto-dois-celulares.png"
-          alt="Foto de dois celulares"
-        />
+          <img
+            class="foto-celular"
+            src="imgs/foto-fundo.png"
+            alt="Foto de dois celulares"
+          />
+          <div class="images">
+            <img src="imgs/screenshot1.png" class="in-image" alt="">
+            <img src="imgs/screenshot2.png" class="in-image" alt="">
+            <img src="imgs/screenshot3.png" class="in-image" alt="">
+            <img src="imgs/screenshot4.png" class="in-image" alt="">
+        </div>
       </div>
       <div class="lado-direito">
         <div class="login">
@@ -30,24 +36,34 @@
             alt="Logo do Instagram densenhado de uma forma abstrata"
           />
 
-          <div id="input">
-            <input
-              type="text"
-              name="tel/usuario/email"
-              id="input-email"
-              placeholder="Telefone, nome de usuário ou email"
-              class="input"
-            />
-            <br />
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="Senha"
-              class="input"
-            />
-          </div>
-          <button class="botão-entrar">Entrar</button>
+          <form id="input">
+            <div class="error"></div>
+            <div>
+              <label>
+                <span>Telefone, nome de usuário ou email</span>
+                <input
+                  type="text"
+                  name="tel/usuario/email"
+                  id="input-email"
+                  class="input"
+                />
+              </label>
+            </div>
+
+            <div>
+              <label>
+                <span>Senha</span>
+                <input
+                  type="password"
+                  name="senha"
+                  id="input-senha"
+                  class="input"
+                />
+              </label>
+              <div class="show-password">Mostrar</div>
+            </div>
+            <input type="submit" class="botao-entrar" value="Entrar" disabled />
+          </form>
 
           <div class="div-ou">
             <hr class="hr" />
@@ -100,5 +116,8 @@
         </div>
       </div>
     </section>
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
